@@ -13,7 +13,7 @@ public class SecurityConfig {
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception{
 		
 		http.authorizeHttpRequests(authRequest ->{
-			authRequest.requestMatchers("/","assets/**","/categories_all","/jeux","/about","/contact").permitAll();
+			authRequest.requestMatchers("/","assets/**","/categories_all","/jeux","/about","/contact","/cart","/clients/add").permitAll();
 			authRequest.requestMatchers("/categories_all/addCategory","/categories_all/delete/**","/categories_all/update/**","/jeux/**").authenticated();
 		});
 //		http.formLogin(formLogin->{
